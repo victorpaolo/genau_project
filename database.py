@@ -1,7 +1,8 @@
 import sqlalchemy
 from sqlalchemy import create_engine
+import os
 
-db_connection_string = "mysql+pymysql://o5nhs5oxjy51u0sg3ftg:pscale_pw_lqg2qctRrAxGQSU4HJc98aNynD3UMgMbJr5GGJ9CWKO@aws.connect.psdb.cloud/genauproject?charset=utf8mb4"
+db_connection_string = os.environ['DB_CONNECTION_STRING']  
 
 engine = create_engine(
   db_connection_string,
