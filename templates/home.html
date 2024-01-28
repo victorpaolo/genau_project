@@ -19,9 +19,16 @@
         <h1 class="title">
           Hier das Haus
         </h1>
-        <p class="subtitle">
-          This is the home page of the website.
-        </p>
+        <table class="subtitle">
+            <tr>
+              <th>Artikel</th>
+              <th>Wort</th>
+              <th>Ausgabe</th>
+            </tr>
+          {% for wort in worts %}
+            {% include 'wort.html' %}
+          {% endfor %}
+        </table>
       </div>
     </section>
   </body>
